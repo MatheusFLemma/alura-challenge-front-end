@@ -1,0 +1,49 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+}
+
+body {
+  background: var(--dark-blue);
+}
+
+a {
+  color: var(--white);
+  font-family: var(--body);
+  font-size: var(--body-size);
+  margin: 0 0 0 .5rem;
+}
+
+ul, li {
+  list-style: none;
+}
+
+hr {
+  border: 1px solid rgba(255, 255, 255, .08);
+  margin: 0 0 1.5rem 0;
+}
+
+.container {
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 1440px) {
+  .grid {
+    grid-template-columns: 17rem 47rem 17rem;
+    gap: 2.5rem;
+  }
+}

@@ -1,0 +1,58 @@
+.asa {
+  padding: 1rem;
+}
+
+.header__container {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__controls {
+  display: flex;
+}
+
+.header__search-bar,
+.header__nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.header__search-bar i,
+.header__nav-icon i {
+  font-size: 1.25rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.header__nav-bar {
+  margin: 1.5rem 0 0 0;
+  width: 80%;
+  float: right;
+  height: calc(100vh - 7rem);
+  border-radius: .5rem;
+  padding: 1.5rem;
+  background: #2D415B;
+}
+
+.nav-bar__link {
+  margin: 0 0 1rem 0;
+}
+
+.nav-bar__pages {
+  opacity: 16%;
+  transition: .2s;
+}
+
+.nav-bar__pages:hover {
+  opacity: 64%;
+}
+
+.nav-bar__pages:active {
+  opacity: 100%;
+}
