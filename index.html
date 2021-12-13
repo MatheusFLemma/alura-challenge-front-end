@@ -11,6 +11,7 @@
 
     <!-- ==================== CSS ==================== -->
     <!-- ========== BÁSICOS ========== -->
+    <link rel="stylesheet" href="src/css/menu-lateral.css">
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/variables.css">
 
@@ -28,19 +29,126 @@
 
   </head>
 
-  <body>
+  <body class="container">
 
-    <header>
+    <header class="header__container">
+
+      <img src="src/assets/img/logo.svg" alt="AluraDev logo">
+
+      <input type="text" placeholder="Busque por algo" class="header__search-bar--full" name="search" id="search">
 
 
+      <div class="header__controls">
+
+        <button id="search-bar-open" type="button" class="menu menu--icon header__search-bar">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <button id="btn-menu" type="button" class="menu menu--icon header__nav-icon">
+          <i id="icon-menu" class="fas fa-bars"></i>
+        </button>
+
+        <button type="button" class="btn btn--user header__user-profile">
+
+          <img src="src/assets/img/photo.svg" alt="Foto de perfil">
+          <span>Harry</span>
+
+        </button>
+
+      </div>
 
     </header>
 
-    <main>
+    <div id="search-bar-mobile" class="search-bar--mobile hidden">
+
+      <input type="text" placeholder="Busque por algo" class="header__search-bar--mobile" name="search" id="search">
+
+      <button id="search-bar-close" type="button" class="menu menu--icon search-bar--close">
+        <i class="fas fa-times"></i>
+      </button>
+
+    </div>
+
+    <nav id="menu-nav-bar" class="header__nav-bar hidden">
+
+      <ul>
+
+        <li class="nav-bar__link nav-bar__pages">
+
+          <button type="button" class="menu menu--item">
+            <i class="fas fa-code"></i>
+          </button>
+
+          <a href="/"><span>Editor de código</span></a>
+
+        </li>
+
+        <li class="nav-bar__link nav-bar__pages">
+
+          <button type="button" class="menu menu--item">
+            <i class="fas fa-users"></i>
+          </button>
+
+          <a href="/"><span>Comunidade</span></a>
+
+        </li>
+
+        <hr>
+
+        <li class="nav-bar__link">
+
+          <button type="button" class="btn btn--user">
+
+            <img src="src/assets/img/photo.svg" alt="Foto de perfil">
+            <span>Harry</span>
+
+          </button>
+
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <main class="grid">
+
+      <aside class="menu__lateral">
+
+        <h2 class="menu__title">
+          Menu
+        </h2>
+
+        <ul>
+
+          <li class="nav-bar__link nav-bar__pages">
+  
+            <button type="button" class="menu menu--item">
+              <i class="fas fa-code"></i>
+            </button>
+  
+            <a href="/"><span>Editor de código</span></a>
+  
+          </li>
+  
+          <li class="nav-bar__link nav-bar__pages">
+  
+            <button type="button" class="menu menu--item">
+              <i class="fas fa-users"></i>
+            </button>
+  
+            <a href="/"><span>Comunidade</span></a>
+  
+          </li>
+        
+        </ul>
+
+      </aside>
 
 
-      
+
     </main>
+
+    <script src="src/js/header.js"></script>
     
   </body>
 

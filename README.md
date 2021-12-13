@@ -11,10 +11,6 @@ Desafio Front-end da Alura. O desafio tem o objetivo de transformar o design em 
 ## To-do List
 
 ### Backlog
-- Logo da plataforma;
-- Barra de pesquisa;
-- Imagem do perfil de usuário com nome;
-- Menu de navegação;
 - Campo para título do projeto;
 - Campo para descrição do projeto;
 - Campo para selecionar a linguagem;
@@ -24,7 +20,11 @@ Desafio Front-end da Alura. O desafio tem o objetivo de transformar o design em 
 - Botão para adicionar syntax highlight ao código.
 
 ### Em desenvolvimento
+- Menu de navegação.
 
 ### Pausado
 
 ### Concluído
+- Logo da plataforma;
+- Barra de pesquisa;
+- Imagem do perfil de usuário com nome;

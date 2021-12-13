@@ -8,6 +8,7 @@
 
 body {
   background: var(--dark-blue);
+  transition: .2s;
 }
 
 a {
@@ -46,4 +47,9 @@ hr {
     grid-template-columns: 17rem 47rem 17rem;
     gap: 2.5rem;
   }
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
 }
