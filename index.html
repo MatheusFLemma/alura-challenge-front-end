@@ -11,8 +11,8 @@
 
     <!-- ==================== CSS ==================== -->
     <!-- ========== BÁSICOS ========== -->
-    <link rel="stylesheet" href="src/css/menu-lateral.css">
     <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/side-menu.css">
     <link rel="stylesheet" href="src/css/variables.css">
 
     <!-- ========== COMPONENTES ========== -->
@@ -112,7 +112,7 @@
 
     <main class="grid">
 
-      <aside class="menu__lateral">
+      <aside class="side-menu__container">
 
         <h2 class="menu__title">
           Menu
@@ -144,7 +144,96 @@
 
       </aside>
 
+      <section class="code__container">
 
+        <div class="project-card__code--background">
+
+          <div class="project-card__code--top">
+            <div class="code--close"></div>
+            <div class="code--minimize"></div>
+            <div class="code--maximize"></div>
+          </div>
+
+          <textarea
+                    class="project-card__code-editor--background "
+                    name="code-editor"
+                    id="code-editor"
+                    rows="10">
+          </textarea>
+
+        </div>
+
+        <button 
+                type="submit"
+                class="btn btn--outlined highlight__button">
+                Visualizar com o highlight
+        </button>
+
+      </section>
+
+      <form action="save-project" method="post">
+
+        <h3 class="form__title">
+          Seu projeto
+        </h3>
+
+        <input
+               type="text"
+               name="name"
+               id="name"
+               class="form__name"
+               placeholder="Nome do seu projeto"
+        >
+
+        <input 
+               type="text"
+               name="description"
+               id="description"
+               class="form__description"
+               placeholder="Descrição do seu projeto"
+        >
+
+        <h3 class="form__customization">
+          Personalização
+        </h3>
+
+        <div class="customization__container">
+
+          <select
+                class="language__selector"
+                name="language"
+                id="language"
+          >
+
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="c">C</option>
+            <option value="cplusplus">C++</option>
+            <option value="csharp">C#</option>
+            <option value="java">Java</option>
+            <option value="json">JSON</option>
+            <option value="python">Python</option>
+
+          </select>
+
+          <input
+                  class="color__picker"
+                  type="color"
+                  value="#6BD1FF"
+                  name="color-picker"
+                  id="color-picker"
+          >
+
+        </div>
+
+        <button
+                type="submit"
+                class="btn btn--filled save__button">
+                Salvar projeto
+        </button>
+
+      </form>
 
     </main>
 

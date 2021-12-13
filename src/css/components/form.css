@@ -1,3 +1,9 @@
+@media screen and (min-width: 1440px) {
+  form {
+    margin: 2.5rem 0 0 0;
+  }
+}
+
 /* ==================== INPUT DE TIPO TEXTO ==================== */
 input[type="text"] {
   background-color: rgba(255, 255, 255, .16);
@@ -25,6 +31,39 @@ input[type="text"]:focus::placeholder {
   color: transparent;
 }
 
+input[type="text"].form__name {
+  margin: 1rem 0;
+}
+
+input[type="text"].form__description {
+  height: 5rem;
+  margin: 0 0 2.5rem 0;
+}
+
+input[type="color"] {
+  width: 100%;
+  appearance: none;
+  height: 3.5rem;
+  border: 1px solid var(--white);
+  border-radius: .5rem;
+  cursor: pointer;
+  background: transparent;
+  padding: .5rem;
+  margin: 1rem 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  input[type="color"] {
+    margin: 0 0 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  input[type="color"] {
+    margin: 1rem 0 0 0;
+  }
+}
+
 /* ==================== SELETOR DE OPÇÕES ==================== */
 select {
   background-color: rgba(255, 255, 255, .16);
@@ -42,4 +81,27 @@ select {
 
 select:hover {
   background-color: rgba(255, 255, 255, .24);
+}
+
+.form__customization {
+  margin: 0 0 1rem 0;
+}
+
+.customization__container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .customization__container {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .customization__container {
+    align-items: center;
+    flex-direction: column;
+  }
 }

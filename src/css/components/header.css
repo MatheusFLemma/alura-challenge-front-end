@@ -30,8 +30,11 @@
 
 .header__nav-bar {
   margin: 1.5rem 0 0 0;
-  width: 70%;
-  float: right;
+  width: 15.875rem;
+  position: absolute;
+  z-index: 1000;
+  right: 1rem;
+  top: 3rem;
   height: calc(100vh - 7rem);
   border-radius: .5rem;
   padding: 1.5rem;
@@ -63,9 +66,8 @@
 .search-bar--mobile {
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  margin: 1rem 0;
   transition: .2s;
-  float: right;
   width: 100%;
 }
 

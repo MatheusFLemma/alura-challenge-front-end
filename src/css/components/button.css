@@ -6,6 +6,7 @@ button {
 .btn {
   padding: 1rem;
   border-radius: .5rem;
+  width: 100%;
   font-family: var(--body);
   font-size: 1rem;
   background: transparent;
@@ -49,6 +50,14 @@ button {
 
 .btn--outlined:focus {
   background: rgba(80, 129, 251, .16);
+}
+
+.highlight__button {
+  margin: 2rem 0 2.5rem 0;
+}
+
+.save__button {
+  margin: 2rem 0;
 }
 
 /* -------------------------------------------------------- */

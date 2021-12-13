@@ -1,0 +1,19 @@
+.side-menu__container {
+  display: none;
+}
+
+.menu__title {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .side-menu__container {
+    display: block;
+    margin: 2.5rem 0 0 0;
+  }
+  
+  .menu__title {
+    display: block;
+    margin: 0 0 1rem 0;
+  }
+}
