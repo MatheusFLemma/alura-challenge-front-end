@@ -11,9 +11,6 @@ Desafio Front-end da Alura. O desafio tem o objetivo de transformar o design em 
 ## To-do List
 
 ### Backlog
-- Implementar micro interações na página do editor de código;
-- Cartões dos projetos salvos;
-- Implementar micro interações nas demais páginas.
 
 ### Em desenvolvimento
 
@@ -34,3 +31,6 @@ Desafio Front-end da Alura. O desafio tem o objetivo de transformar o design em 
 - Links do menu navegação funcionando;
 - Implementação do destaque de sintaxe;
 - Implementar a cor de fundo do editor;
+- - Implementar micro interações na página do editor de código;
+- Cartões dos projetos salvos;
+- Implementar micro interações nas demais páginas.
