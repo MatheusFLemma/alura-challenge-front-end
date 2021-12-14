@@ -59,6 +59,10 @@
   opacity: 100%;
 }
 
+.nav-bar__actual {
+  opacity: 100%;
+}
+
 .header__search-bar--full {
   display: none;
 }

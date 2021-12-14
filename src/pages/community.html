@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Dev - Comunidade</title>
+
+    <!-- ==================== CSS ==================== -->
+    <!-- ========== BÁSICOS ========== -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/side-menu.css">
+    <link rel="stylesheet" href="../css/variables.css">
+
+    <!-- ========== COMPONENTES ========== -->
+    <link rel="stylesheet" href="../css/components/button.css">
+    <link rel="stylesheet" href="../css/components/form.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/project-card.css">
+
+    <!-- ==================== FONT AWESOME (ÍCONES) ==================== -->
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+          crossorigin="anonymous">
+
+  </head>
+
+  <body class="container">
+
+    <header class="header__container">
+
+      <img src="../assets/img/logo.svg" alt="AluraDev logo">
+
+      <input type="text" placeholder="Busque por algo" class="header__search-bar--full" name="search" id="search">
+
+
+      <div class="header__controls">
+
+        <button id="search-bar-open" type="button" class="menu menu--icon header__search-bar">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <button id="btn-menu" type="button" class="menu menu--icon header__nav-icon">
+          <i id="icon-menu" class="fas fa-bars"></i>
+        </button>
+
+        <button type="button" class="btn btn--user header__user-profile">
+
+          <img src="../assets/img/photo.svg" alt="Foto de perfil">
+          <span>Harry</span>
+
+        </button>
+
+      </div>
+
+    </header>
+
+    <div id="search-bar-mobile" class="search-bar--mobile hidden">
+
+      <input type="text" placeholder="Busque por algo" class="header__search-bar--mobile" name="search" id="search">
+
+      <button id="search-bar-close" type="button" class="menu menu--icon search-bar--close">
+        <i class="fas fa-times"></i>
+      </button>
+
+    </div>
+
+    <nav id="menu-nav-bar" class="header__nav-bar hidden">
+
+      <ul>
+
+        <li class="nav-bar__link nav-bar__pages">
+
+          <button type="button" class="menu menu--item">
+            <i class="fas fa-code"></i>
+          </button>
+
+          <a href="../../index.html"><span>Editor de código</span></a>
+
+        </li>
+
+        <li class="nav-bar__link nav-bar__pages nav-bar__actual">
+
+          <button type="button" class="menu menu--item">
+            <i class="fas fa-users"></i>
+          </button>
+
+          <a href="/src/pages/community.html"><span>Comunidade</span></a>
+
+        </li>
+
+        <hr>
+
+        <li class="nav-bar__link">
+
+          <button type="button" class="btn btn--user">
+
+            <img src="../assets/img/photo.svg" alt="Foto de perfil">
+            <span>Harry</span>
+
+          </button>
+
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <main class="grid--community">
+
+      <aside class="side-menu__container">
+
+        <h2 class="menu__title">
+          Menu
+        </h2>
+
+        <ul>
+
+          <li class="nav-bar__link nav-bar__pages">
+  
+            <button type="button" class="menu menu--item">
+              <i class="fas fa-code"></i>
+            </button>
+  
+            <a href="/"><span>Editor de código</span></a>
+  
+          </li>
+  
+          <li class="nav-bar__link nav-bar__pages nav-bar__actual">
+  
+            <button type="button" class="menu menu--item">
+              <i class="fas fa-users"></i>
+            </button>
+  
+            <a href="/"><span>Comunidade</span></a>
+  
+          </li>
+        
+        </ul>
+
+      </aside>
+
+      <div class="grid--saved">
+
+        <section class="saved-project__container">
+
+          <div class="project-card__code--background">
+  
+            <div class="project-card__code--top">
+              <div class="code--close"></div>
+              <div class="code--minimize"></div>
+              <div class="code--maximize"></div>
+            </div>
+  
+            <p
+                class="project-card__code-editor--background"
+                >
+                const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                <br><br>
+                const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                <br><br>
+                const unfold = (f, seed) => {
+                <span class="indent">const go = (f, seed, acc) => {</span>
+                <br><br>
+                <span class="double-indent">const res = f(seed)</span>
+                <br>
+                <span class="double-indent">return res ? go(f, res[1],
+                <br>acc.concat([res[0]])) : acc</span>
+                <br>
+                <span class="indent">}</span>
+                <br>
+                <span class="indent">return go(f, seed, [])</span>
+                <br>
+                }
+            </p>
+  
+          </div>
+  
+          <div class="project-card__infos">
+  
+            <h4 class="project-card__title">Título do projeto</h4>
+            <p class="project-card__description">Essa é a descrição do meu projeto</p>
+  
+            <div class="project-card__profile">
+  
+              <div class="project-card__saved--features">
+  
+                <button
+                        type="button"
+                        class="interface interface--comment"
+                >
+                <i class="fas fa-comment"></i>
+                <span>9</span>
+                </button>
+  
+                <button
+                        type="button"
+                        class="interface interface--favorite"
+                >
+                <i class="fas fa-heart"></i>
+                <span>9</span>
+                </button>
+  
+              </div>
+  
+              <button type="button" class="btn btn--user">
+                <img src="../assets/img/photo.svg" alt="Foto de perfil">
+                <span>Harry</span>
+              </button>
+  
+            </div>
+  
+          </div>
+
+        </section>
+
+        <section class="saved-project__container">
+
+          <div class="project-card__code--background">
+  
+            <div class="project-card__code--top">
+              <div class="code--close"></div>
+              <div class="code--minimize"></div>
+              <div class="code--maximize"></div>
+            </div>
+  
+            <p
+                class="project-card__code-editor--background"
+                >
+                const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                <br><br>
+                const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                <br><br>
+                const unfold = (f, seed) => {
+                <span class="indent">const go = (f, seed, acc) => {</span>
+                <br><br>
+                <span class="double-indent">const res = f(seed)</span>
+                <br>
+                <span class="double-indent">return res ? go(f, res[1],
+                <br>acc.concat([res[0]])) : acc</span>
+                <br>
+                <span class="indent">}</span>
+                <br>
+                <span class="indent">return go(f, seed, [])</span>
+                <br>
+                }
+            </p>
+  
+          </div>
+  
+          <div class="project-card__infos">
+  
+            <h4 class="project-card__title">Título do projeto</h4>
+            <p class="project-card__description">Essa é a descrição do meu projeto</p>
+  
+            <div class="project-card__profile">
+  
+              <div class="project-card__saved--features">
+  
+                <button
+                        type="button"
+                        class="interface interface--comment"
+                >
+                <i class="fas fa-comment"></i>
+                <span>9</span>
+                </button>
+  
+                <button
+                        type="button"
+                        class="interface interface--favorite"
+                >
+                <i class="fas fa-heart"></i>
+                <span>9</span>
+                </button>
+  
+              </div>
+  
+              <button type="button" class="btn btn--user">
+                <img src="../assets/img/photo.svg" alt="Foto de perfil">
+                <span>Harry</span>
+              </button>
+  
+            </div>
+  
+          </div>
+
+        </section>
+
+        <section class="saved-project__container">
+
+          <div class="project-card__code--background">
+  
+            <div class="project-card__code--top">
+              <div class="code--close"></div>
+              <div class="code--minimize"></div>
+              <div class="code--maximize"></div>
+            </div>
+  
+            <p
+                class="project-card__code-editor--background"
+                >
+                const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                <br><br>
+                const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                <br><br>
+                const unfold = (f, seed) => {
+                <span class="indent">const go = (f, seed, acc) => {</span>
+                <br><br>
+                <span class="double-indent">const res = f(seed)</span>
+                <br>
+                <span class="double-indent">return res ? go(f, res[1],
+                <br>acc.concat([res[0]])) : acc</span>
+                <br>
+                <span class="indent">}</span>
+                <br>
+                <span class="indent">return go(f, seed, [])</span>
+                <br>
+                }
+            </p>
+  
+          </div>
+  
+          <div class="project-card__infos">
+  
+            <h4 class="project-card__title">Título do projeto</h4>
+            <p class="project-card__description">Essa é a descrição do meu projeto</p>
+  
+            <div class="project-card__profile">
+  
+              <div class="project-card__saved--features">
+  
+                <button
+                        type="button"
+                        class="interface interface--comment"
+                >
+                <i class="fas fa-comment"></i>
+                <span>9</span>
+                </button>
+  
+                <button
+                        type="button"
+                        class="interface interface--favorite"
+                >
+                <i class="fas fa-heart"></i>
+                <span>9</span>
+                </button>
+  
+              </div>
+  
+              <button type="button" class="btn btn--user">
+                <img src="../assets/img/photo.svg" alt="Foto de perfil">
+                <span>Harry</span>
+              </button>
+  
+            </div>
+  
+          </div>
+
+        </section>
+
+        <section class="saved-project__container">
+
+          <div class="project-card__code--background">
+  
+            <div class="project-card__code--top">
+              <div class="code--close"></div>
+              <div class="code--minimize"></div>
+              <div class="code--maximize"></div>
+            </div>
+  
+            <p
+                class="project-card__code-editor--background"
+                >
+                const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                <br><br>
+                const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                <br><br>
+                const unfold = (f, seed) => {
+                <span class="indent">const go = (f, seed, acc) => {</span>
+                <br><br>
+                <span class="double-indent">const res = f(seed)</span>
+                <br>
+                <span class="double-indent">return res ? go(f, res[1],
+                <br>acc.concat([res[0]])) : acc</span>
+                <br>
+                <span class="indent">}</span>
+                <br>
+                <span class="indent">return go(f, seed, [])</span>
+                <br>
+                }
+            </p>
+  
+          </div>
+  
+          <div class="project-card__infos">
+  
+            <h4 class="project-card__title">Título do projeto</h4>
+            <p class="project-card__description">Essa é a descrição do meu projeto</p>
+  
+            <div class="project-card__profile">
+  
+              <div class="project-card__saved--features">
+  
+                <button
+                        type="button"
+                        class="interface interface--comment"
+                >
+                <i class="fas fa-comment"></i>
+                <span>9</span>
+                </button>
+  
+                <button
+                        type="button"
+                        class="interface interface--favorite"
+                >
+                <i class="fas fa-heart"></i>
+                <span>9</span>
+                </button>
+  
+              </div>
+  
+              <button type="button" class="btn btn--user">
+                <img src="../assets/img/photo.svg" alt="Foto de perfil">
+                <span>Harry</span>
+              </button>
+  
+            </div>
+  
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+    <script src="../js/header.js"></script>
+    
+  </body>
+
+</html>

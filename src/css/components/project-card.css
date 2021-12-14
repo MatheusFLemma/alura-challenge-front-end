@@ -24,6 +24,12 @@ textarea {
   padding: 1.5rem;
 }
 
+p.project-card__code-editor--background {
+  color: var(--white);
+  font-family: var(--code);
+  font-size: var(--code-size);
+}
+
 .project-card__code--top {
   width: 100%;
   background: var(--dark-gray);
@@ -85,6 +91,13 @@ textarea {
   font-family: var(--body);
   font-size: var(--body-size);
   color: rgba(255, 255, 255, .80);
+}
+
+.project-card__saved--features {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-between;
 }
 
 .project-card__profile {

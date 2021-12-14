@@ -53,15 +53,34 @@ hr {
   }
 }
 
-.grid {
+.grid,
+.grid--community,
+.grid--saved {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.grid--saved {
+  margin: 2.5rem 0 0 0;
+  grid-auto-flow: row;
+  gap: 2rem;
 }
 
 @media screen and (min-width: 1440px) {
   .grid {
     grid-template-columns: 17rem 47rem 17rem;
     gap: 2.5rem;
+  }
+
+  .grid--community {
+    grid-template-columns: 17rem 1fr;
+    gap: 2.5rem;
+  }
+
+  .grid--saved {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -72,4 +91,12 @@ hr {
 
 .code__container {
   margin: 2.5rem 0 0 0;
+}
+
+.indent {
+  margin: 0 0 0 1.5rem;
+}
+
+.double-indent {
+  margin: 0 0 0 3rem;
 }

@@ -6,7 +6,6 @@ button {
 .btn {
   padding: 1rem;
   border-radius: .5rem;
-  width: 100%;
   font-family: var(--body);
   font-size: 1rem;
   background: transparent;
@@ -17,6 +16,7 @@ button {
   color: var(--dark-blue);
   cursor: pointer;
   transition: .2s;
+  width: 100%;
 }
 
 .btn--filled:hover {
@@ -37,6 +37,7 @@ button {
   color: var(--white);
   cursor: pointer;
   transition: .2s;
+  width: 100%;
 }
 
 .btn--outlined:hover {
