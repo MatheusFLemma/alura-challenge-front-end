@@ -10,6 +10,10 @@
     <title>Alura Dev - Home</title>
 
     <!-- ==================== CSS ==================== -->
+
+    <!-- ========== HIGHLIGHT SYNTAX CSS (DRACULA) ========== -->
+    <link rel="stylesheet" href="src/css/dracula.css">
+
     <!-- ========== BÁSICOS ========== -->
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/side-menu.css">
@@ -30,7 +34,8 @@
   </head>
 
   <body class="container">
-
+    
+    <!-- CABEÇALHO -->
     <header class="header__container">
 
       <img src="src/assets/img/logo.svg" alt="AluraDev logo">
@@ -59,6 +64,7 @@
 
     </header>
 
+    <!-- BARRA DE PESQUISA MOBILE -->
     <div id="search-bar-mobile" class="search-bar--mobile hidden">
 
       <input type="text" placeholder="Busque por algo" class="header__search-bar--mobile" name="search" id="search">
@@ -69,6 +75,7 @@
 
     </div>
 
+    <!-- MENU DE NAVEGAÇÃO MOBILE -->
     <nav id="menu-nav-bar" class="header__nav-bar hidden">
 
       <ul>
@@ -112,6 +119,7 @@
 
     <main class="grid">
 
+      <!-- NAVEGAÇÃO LATERAL DESKTOP -->
       <aside class="side-menu__container">
 
         <h2 class="menu__title">
@@ -144,6 +152,7 @@
 
       </aside>
 
+      <!-- EDITOR DE CODIGO -->
       <section class="code__container">
 
         <div class="project-card__code--background">
@@ -154,12 +163,31 @@
             <div class="code--maximize"></div>
           </div>
 
-          <textarea
-                    class="project-card__code-editor--background "
-                    name="code-editor"
-                    id="code-editor"
-                    rows="10">
-          </textarea>
+          <!-- EDITOR DE CÓDIGO -->
+          <div class="project-card__code-editor">
+            <code class="code__preview hljs" contenteditable="true">
+const pluckDeep = key => obj
+=>
+key.split('.').reduce((accum, 
+key) => accum[key], obj)
+
+const compose = (...fns) => 
+res => fns.reduce((accum,
+next) =>(accum), res)
+
+const unfold = (f, seed) =>
+{
+  const go = (f, seed, acc)
+=> {
+    const res = f(sedd)
+    return res ? go(f,
+res[1], acc.concat([res[0]]))
+: acc
+  }
+  return go(f, seed, [])
+}
+            </code>
+          </div>
 
         </div>
 
@@ -171,6 +199,7 @@
 
       </section>
 
+      <!-- FORMULÁRIO PARA SALVAR PROJETO -->
       <form action="save-project" method="post">
 
         <h3 class="form__title">
@@ -237,6 +266,11 @@
 
     </main>
 
+    <!-- SCRIPT HIGHLIGHT SYNTAX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="src/js/highlight.js"></script>
+
+    <!-- SCRIPT DE INTERAÇÕES -->
     <script src="src/js/header.js"></script>
     
   </body>

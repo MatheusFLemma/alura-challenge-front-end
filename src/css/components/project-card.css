@@ -1,8 +1,10 @@
-textarea {
+code {
   background: transparent;
   border: none;
   resize: none;
   width: 100%;
+  height: 100%;
+  padding: 0;
   color: var(--white);
   font-family: var(--code);
   font-weight: var(--code-weight);
@@ -61,7 +63,14 @@ p.project-card__code-editor--background {
   background: var(--green);
 }
 
-.project-card__code-editor--background {
+.code__preview {
+  background: transparent;
+  height: 100%;
+  white-space: pre-wrap;
+  cursor: text;
+}
+
+.project-card__code-editor {
   width: 100%;
   padding: .75rem;
   height: 26.75rem;
