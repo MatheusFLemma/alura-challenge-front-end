@@ -11,6 +11,7 @@ Desafio Front-end da Alura. O desafio tem o objetivo de transformar o design em 
 ## To-do List
 
 ### Backlog
+- SEMANA 3 (EM BREVE)
 
 ### Em desenvolvimento
 
